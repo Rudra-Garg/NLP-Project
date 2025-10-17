@@ -1,0 +1,27 @@
+# Audio Processing
+sounddevice
+numpy
+
+# Wake Word
+pvporcupine
+
+# Speech-to-Text (highly optimized)
+faster-whisper
+
+# For loading .env configuration file
+python-dotenv
+
+hf_xet
+
+# For sentence embeddings and similarity calculation
+sentence-transformers
+scikit-learn
+
+# For Ollama integration (will be used soon)
+ollama
+
+# For safe math evaluation
+numexpr
+
+piper-tts
+

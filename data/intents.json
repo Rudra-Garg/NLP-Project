@@ -1,0 +1,43 @@
+[
+  {
+    "type": "system_control",
+    "action": "launch_application",
+    "prompts": [
+      "open browser",
+      "launch chrome",
+      "start firefox",
+      "open notepad",
+      "launch the calculator"
+    ]
+  },
+  {
+    "type": "calculation",
+    "action": "evaluate_expression",
+    "prompts": [
+      "calculate 25 times 4",
+      "what is 100 divided by 5",
+      "compute the square root of 144",
+      "evaluate 2 plus 2",
+      "how much is 5 factorial"
+    ]
+  },
+  {
+    "type": "general",
+    "action": "get_time",
+    "prompts": [
+      "what time is it",
+      "tell me the time",
+      "what's the current time"
+    ]
+  },
+  {
+    "type": "general",
+    "action": "conversation",
+    "prompts": [
+      "tell me a story",
+      "tell me a joke",
+      "how are you",
+      "who are you"
+    ]
+  }
+]
