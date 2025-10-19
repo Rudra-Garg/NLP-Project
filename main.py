@@ -1,7 +1,8 @@
-import os
-from pathlib import Path
 import io
+import os
 import wave
+from pathlib import Path
+
 import numpy as np
 import sounddevice as sd
 from dotenv import load_dotenv
@@ -13,54 +14,41 @@ from agents import CalculationAgent, SystemControlAgent
 from intent import FastClassifier, LLMClassifier
 from tts import PiperTTSNative
 
-try:
-    DEFAULT_SAMPLE_RATE = int(sd.query_devices(kind='output')['default_samplerate'])
-    print(f"[Audio] Detected default device sample rate: {DEFAULT_SAMPLE_RATE} Hz")
-except Exception as e:
-    print(f"[Audio] WARNING: Could not detect default sample rate, falling back to 22050 Hz. Error: {e}")
-    DEFAULT_SAMPLE_RATE = 22050
 
+def play_audio(wav_bytes: bytes):
+    """
+    Plays WAV audio data from a byte string.
+    This function reads the WAV header to ensure correct playback parameters.
+    """
+    print(f"[Playback] Received {len(wav_bytes)} bytes of WAV data.")
 
-def play_audio(tts_output: bytes):
-    """Helper function to play audio by properly parsing the WAV file."""
-    print(f"[Playback] Received {len(tts_output)} bytes of WAV data.")
-
-    if len(tts_output) <= 44:
-        print("[Playback] ERROR: No audio data to play.")
+    if len(wav_bytes) <= 44:
+        print("[Playback] ERROR: No valid audio data to play.")
         return
 
     try:
-        # Use wave module to properly parse the WAV file
-        with wave.open(io.BytesIO(tts_output), 'rb') as wav_file:
-            # Get audio parameters
-            n_channels = wav_file.getnchannels()
-            sampwidth = wav_file.getsampwidth()  # bytes per sample
-            framerate = wav_file.getframerate()
-            n_frames = wav_file.getnframes()
+        with wave.open(io.BytesIO(wav_bytes), 'rb') as wav_file:
+            sample_rate = wav_file.getframerate()
+            num_channels = wav_file.getnchannels()
+            samp_width = wav_file.getsampwidth()
+            num_frames = wav_file.getnframes()
 
-            print(f"[Playback] WAV info - Channels: {n_channels}, Sample width: {sampwidth} bytes, Rate: {framerate} Hz, Frames: {n_frames}")
+            print(f"[Playback] WAV info - Rate: {sample_rate} Hz, Channels: {num_channels}, Width: {samp_width} bytes")
 
-            # Read the raw audio data
-            raw_audio = wav_file.readframes(n_frames)
+            raw_audio = wav_file.readframes(num_frames)
 
-            # Convert based on sample width
-            if sampwidth == 2:  # 16-bit
-                audio_data = np.frombuffer(raw_audio, dtype=np.int16)
-                audio_data = audio_data.astype(np.float32) / 32768.0
-            elif sampwidth == 4:  # 32-bit
-                audio_data = np.frombuffer(raw_audio, dtype=np.int32)
-                audio_data = audio_data.astype(np.float32) / 2147483648.0
+            if samp_width == 2:
+                dtype = np.int16
+            elif samp_width == 4:
+                dtype = np.int32
             else:
-                print(f"[Playback] ERROR: Unsupported sample width: {sampwidth}")
+                print(f"[Playback] ERROR: Unsupported sample width: {samp_width}")
                 return
 
-            # If stereo, keep as is; sounddevice handles it
-            if n_channels == 2:
-                audio_data = audio_data.reshape(-1, 2)
+            audio_data = np.frombuffer(raw_audio, dtype=dtype)
 
-            print(f"[Playback] Starting playback of {len(audio_data)} samples at {framerate} Hz...")
-            sd.play(audio_data, samplerate=framerate)
-            sd.wait()
+            print(f"[Playback] Starting playback of {num_frames} frames at {sample_rate} Hz...")
+            sd.play(audio_data, samplerate=sample_rate, blocking=True)
             print("[Playback] Playback finished.")
 
     except Exception as e:
@@ -75,18 +63,17 @@ def main():
     try:
         access_key = os.environ["ACCESS_KEY"]
     except KeyError:
+        print("ERROR: ACCESS_KEY not found in .env file.")
         return
 
     project_root = Path(__file__).parent
     model_path = project_root / "models"
     data_path = project_root / "data"
-    piper_path = project_root / "piper"
 
     porcupine_model_path = str(model_path / "porcupine" / "porcupine_params.pv")
     porcupine_keyword_path = str(model_path / "porcupine" / "Hey-Loki.ppn")
     intents_json_path = data_path / "intents.json"
-    piper_exe_path = str(piper_path / "piper.exe")
-    piper_model_path = str(piper_path / "en_US-hfc_male-medium.onnx")
+    piper_model_path = str(model_path / "piper" / "en_US-hfc_male-medium.onnx")
 
     RECORD_SECONDS = 5
     print("--- Initializing LOKI Components ---")
@@ -120,9 +107,17 @@ def main():
                     play_audio(tts.speak("Yes?"))
 
                     print(f"Recording for {RECORD_SECONDS} seconds...")
-                    num_frames = int(SAMPLE_RATE / FRAME_LENGTH * RECORD_SECONDS)
-                    audio_buffer = [stream.read(FRAME_LENGTH)[0] for _ in range(num_frames)]
-                    audio_float32 = np.concatenate(audio_buffer).flatten().astype(np.float32) / 32768.0
+                    num_frames_to_record = int(SAMPLE_RATE / FRAME_LENGTH * RECORD_SECONDS)
+
+                    # Pre-allocate buffer - use a list for simpler appending
+                    audio_chunks = []
+                    for i in range(num_frames_to_record):
+                        chunk, _ = stream.read(FRAME_LENGTH)
+                        audio_chunks.append(chunk.flatten())  # Flatten to 1D immediately
+
+                    # Concatenate all chunks into a single array
+                    audio_int16 = np.concatenate(audio_chunks)
+                    audio_float32 = audio_int16.astype(np.float32) / 32768.0
 
                     print("Transcribing...")
                     segments, _ = whisper.transcribe(audio_float32, language="en")
@@ -130,7 +125,7 @@ def main():
 
                     if not transcription:
                         print("--> Heard nothing.")
-                        play_audio(tts.speak("I didn't hear anything."))
+                        play_audio(tts.speak("I did not hear anything."))
                         print(f"\nListening for 'Hey Loki'...")
                         continue
 
