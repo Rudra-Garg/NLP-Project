@@ -10,7 +10,7 @@ from faster_whisper import WhisperModel
 from pvporcupine import create
 
 from agent_manager import AgentManager
-from agents import CalculationAgent, SystemControlAgent
+from agents import CalculationAgent, SystemControlAgent, VolumeControlAgent
 from intent import FastClassifier, LLMClassifier
 from tts import PiperTTSNative
 from tts_manager import TTSManager
@@ -83,6 +83,7 @@ def main():
     agent_manager = AgentManager()
     agent_manager.register_agent(CalculationAgent())
     agent_manager.register_agent(SystemControlAgent())
+    agent_manager.register_agent(VolumeControlAgent())
 
     tts = PiperTTSNative(model_path=piper_model_path)
     tts_manager = TTSManager(tts_engine=tts)
