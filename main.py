@@ -17,45 +17,68 @@ from tts_manager import TTSManager
 
 
 def main():
-    # --- 1. Configuration and Initialization ---
+    # --- 1. Load All Configuration from .env File ---
+    print("--- Loading Configuration from .env ---")
     load_dotenv()
-    try:
-        access_key = os.environ["ACCESS_KEY"]
-    except KeyError:
-        print("ERROR: ACCESS_KEY not found in .env file.")
+
+    # PicoVoice Porcupine
+    ACCESS_KEY = os.environ.get("ACCESS_KEY")
+    PORCUPINE_MODEL_PATH = os.environ.get("PORCUPINE_MODEL_PATH")
+    PORCUPINE_KEYWORD_PATH = os.environ.get("PORCUPINE_KEYWORD_PATH")
+    PORCUPINE_SENSITIVITY = float(os.environ.get("PORCUPINE_SENSITIVITY", 0.5))
+
+    # Whisper STT
+    WHISPER_MODEL_SIZE = os.environ.get("WHISPER_MODEL_SIZE", "small.en")
+    WHISPER_DEVICE = os.environ.get("WHISPER_DEVICE", "cpu")
+    WHISPER_COMPUTE_TYPE = os.environ.get("WHISPER_COMPUTE_TYPE", "int8")
+
+    # VAD
+    VAD_THRESHOLD = float(os.environ.get("VAD_THRESHOLD", 0.01))
+    VAD_SILENCE_FRAMES_AFTER_SPEECH = int(os.environ.get("VAD_SILENCE_FRAMES_AFTER_SPEECH", 40))
+    VAD_NO_SPEECH_TIMEOUT_FRAMES = int(os.environ.get("VAD_NO_SPEECH_TIMEOUT_FRAMES", 100))
+    VAD_MAX_RECORDING_FRAMES = int(os.environ.get("VAD_MAX_RECORDING_FRAMES", 350))
+
+    # Intent Classification
+    INTENTS_JSON_PATH = os.environ.get("INTENTS_JSON_PATH")
+    FAST_CLASSIFIER_MODEL = os.environ.get("FAST_CLASSIFIER_MODEL")
+    FAST_CLASSIFIER_THRESHOLD = float(os.environ.get("FAST_CLASSIFIER_THRESHOLD", 0.80))
+    OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "dolphin-phi")
+
+    # Piper TTS
+    PIPER_MODEL_PATH = os.environ.get("PIPER_MODEL_PATH")
+
+    if not ACCESS_KEY:
+        print("ERROR: ACCESS_KEY not found in .env file. Please get a key from PicoVoice Console.")
         return
 
+    # --- 2. Initialization ---
+    print("\n--- Initializing LOKI Components ---")
     project_root = Path(__file__).parent
-    model_path = project_root / "models"
-    data_path = project_root / "data"
 
-    porcupine_model_path = str(model_path / "porcupine" / "porcupine_params.pv")
-    porcupine_keyword_path = str(model_path / "porcupine" / "Hey-Loki.ppn")
-    intents_json_path = data_path / "intents.json"
-    piper_model_path = str(model_path / "piper" / "en_US-hfc_male-medium.onnx")
+    # Resolve relative paths from .env to absolute paths
+    porcupine_model_path = str(project_root / PORCUPINE_MODEL_PATH)
+    porcupine_keyword_path = str(project_root / PORCUPINE_KEYWORD_PATH)
+    intents_json_path = project_root / INTENTS_JSON_PATH
+    piper_model_path = str(project_root / PIPER_MODEL_PATH)
 
-    print("--- Initializing LOKI Components ---")
-
-    porcupine = create(access_key=access_key, model_path=porcupine_model_path, keyword_paths=[porcupine_keyword_path])
+    porcupine = create(
+        access_key=ACCESS_KEY,
+        model_path=porcupine_model_path,
+        keyword_paths=[porcupine_keyword_path],
+        sensitivities=[PORCUPINE_SENSITIVITY]
+    )
     SAMPLE_RATE, FRAME_LENGTH = porcupine.sample_rate, porcupine.frame_length
 
-    # --- VAD & DYNAMIC RECORDING SETTINGS ---
-    VAD_THRESHOLD = 0.01  # Volume threshold for considering audio as speech. Tune this for your mic.
-    # Frames of silence to wait for after speech has been detected.
-    # 1 second of silence = (SAMPLE_RATE / FRAME_LENGTH) frames. e.g. (16000/512) = ~31 frames/sec.
-    # So, 40 frames is ~1.3 seconds of silence.
-    SILENT_FRAMES_AFTER_SPEECH = 40
-    # Frames of silence to wait for if no speech is detected at all.
-    SILENT_FRAMES_NO_SPEECH_TIMEOUT = 100  # About 3 seconds
-    # Safety net to prevent infinite recording.
-    MAX_RECORDING_FRAMES = 350  # About 10-11 seconds
+    print(f"Loading Whisper model '{WHISPER_MODEL_SIZE}' for device '{WHISPER_DEVICE}'...")
+    whisper = WhisperModel(WHISPER_MODEL_SIZE, device=WHISPER_DEVICE, compute_type=WHISPER_COMPUTE_TYPE)
 
-    print("Loading Whisper model...")
-    # Using "small.en" for better accuracy. Change if needed.
-    whisper = WhisperModel("small.en", device="cpu", compute_type="int8")
-
-    fast_classifier = FastClassifier(intents_json_path)
-    llm_classifier = LLMClassifier()
+    # Pass configuration to classifiers
+    fast_classifier = FastClassifier(
+        intents_path=intents_json_path,
+        model_name=FAST_CLASSIFIER_MODEL,
+        threshold=FAST_CLASSIFIER_THRESHOLD
+    )
+    llm_classifier = LLMClassifier(model_name=OLLAMA_MODEL)
 
     agent_manager = AgentManager()
     agent_manager.register_agent(CalculationAgent())
@@ -68,7 +91,7 @@ def main():
     tts_manager.speak_async("Loki is online.")
     print(f"Listening for 'Hey Loki'...")
 
-    # --- 2. Main Audio Loop ---
+    # --- 3. Main Audio Loop ---
     try:
         with sd.InputStream(samplerate=SAMPLE_RATE, channels=1, dtype='int16', blocksize=FRAME_LENGTH) as stream:
             while True:
@@ -77,7 +100,6 @@ def main():
                     print("\nWake word detected!")
                     tts_manager.speak_async("Yes?")
 
-                    # --- DYNAMIC RECORDING LOOP ---
                     print("Listening for command...")
                     audio_chunks = []
                     has_started_speaking = False
@@ -85,9 +107,8 @@ def main():
 
                     while True:
                         chunk, _ = stream.read(FRAME_LENGTH)
-                        audio_chunks.append(chunk)  # Append the raw int16 chunk
+                        audio_chunks.append(chunk)
 
-                        # Normalize chunk to float32 for RMS calculation
                         audio_float32_chunk = chunk.flatten().astype(np.float32) / 32768.0
                         rms = np.sqrt(np.mean(audio_float32_chunk ** 2))
 
@@ -100,25 +121,17 @@ def main():
                             if has_started_speaking:
                                 consecutive_silent_frames += 1
 
-                        # Stop condition 1: Silence after speech
-                        if has_started_speaking and consecutive_silent_frames > SILENT_FRAMES_AFTER_SPEECH:
+                        if has_started_speaking and consecutive_silent_frames > VAD_SILENCE_FRAMES_AFTER_SPEECH:
                             print("End of speech detected.")
                             break
-
-                        # Stop condition 2: Timeout if no speech ever starts
-                        if not has_started_speaking and len(audio_chunks) > SILENT_FRAMES_NO_SPEECH_TIMEOUT:
+                        if not has_started_speaking and len(audio_chunks) > VAD_NO_SPEECH_TIMEOUT_FRAMES:
                             print("No speech detected, timing out.")
                             break
-
-                        # Stop condition 3: Safety net for max recording length
-                        if len(audio_chunks) > MAX_RECORDING_FRAMES:
+                        if len(audio_chunks) > VAD_MAX_RECORDING_FRAMES:
                             print("Maximum recording time reached.")
                             break
 
-                    # --- END DYNAMIC RECORDING ---
-
-                    # Combine recorded chunks and convert to float32 for Whisper
-                    audio_int16 = np.concatenate([chunk.flatten() for chunk in audio_chunks])
+                    audio_int16 = np.concatenate([c.flatten() for c in audio_chunks])
                     audio_float32 = audio_int16.astype(np.float32) / 32768.0
 
                     print("Transcribing...")
@@ -132,18 +145,16 @@ def main():
                         continue
 
                     print(f'--> Heard: "{transcription}"')
-
                     intent = fast_classifier.classify(transcription)
                     print(f'--> Fast Path Intent: {intent}')
 
-                    if intent['type'] == 'unknown' or intent['confidence'] < 0.75:
+                    if intent['type'] == 'unknown' or intent['confidence'] < FAST_CLASSIFIER_THRESHOLD:
                         print("Fast path failed. Falling back to LLM Classifier...")
                         intent = llm_classifier.classify(transcription)
                         print(f'--> LLM Path Intent: {intent}')
 
                     response_text = agent_manager.dispatch(intent)
                     print(f'--> LOKI says: "{response_text}"')
-
                     tts_manager.speak_async(response_text)
                     print(f"\nListening for 'Hey Loki'...")
 

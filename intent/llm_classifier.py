@@ -9,7 +9,7 @@ class LLMClassifier:
     It's slower but much more flexible than the FastClassifier.
     """
 
-    def __init__(self, model_name: str = "dolphin-phi"):
+    def __init__(self, model_name: str):
         print(f"Initializing LLMClassifier with model '{model_name}'...")
         self.model_name = model_name
         # The system prompt is the most important part of making the LLM reliable.
@@ -51,17 +51,9 @@ User: "kljdfg lkjfdg"
                 ],
                 options={'temperature': 0.0}  # We want deterministic output
             )
-
-            # Extract the raw JSON string from the response
             json_string = response['message']['content']
-
-            # Clean up potential markdown formatting from the LLM
             json_string = json_string.strip().replace("```json", "").replace("```", "")
-
-            # Parse the string into a Python dictionary
             result = json.loads(json_string)
-
-            # Add the transcript for context, just like the FastClassifier
             result["transcript"] = transcript
             return result
 

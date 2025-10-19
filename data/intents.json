@@ -3,22 +3,27 @@
     "type": "system_control",
     "action": "launch_application",
     "prompts": [
-      "open browser",
-      "launch chrome",
-      "start firefox",
-      "open notepad",
-      "launch the calculator"
+      "open {app_name}",
+      "launch {app_name}",
+      "start {app_name}",
+      "run {app_name}",
+      "can you open {app_name} for me",
+      "please launch the {app_name} application",
+      "i need to use {app_name}",
+      "show me the {app_name}"
     ]
   },
   {
     "type": "calculation",
     "action": "evaluate_expression",
     "prompts": [
-      "calculate 25 times 4",
-      "what is 100 divided by 5",
-      "compute the square root of 144",
-      "evaluate 2 plus 2",
-      "how much is 5 factorial"
+      "calculate {expression}",
+      "what is {expression}",
+      "compute {expression}",
+      "evaluate {expression}",
+      "tell me the answer to {expression}",
+      "how much is {expression}",
+      "what's the result of {expression}"
     ]
   },
   {
@@ -27,7 +32,9 @@
     "prompts": [
       "what time is it",
       "tell me the time",
-      "what's the current time"
+      "what's the current time",
+      "do you have the time",
+      "time please"
     ]
   },
   {
@@ -37,7 +44,25 @@
       "tell me a story",
       "tell me a joke",
       "how are you",
-      "who are you"
+      "how are you doing",
+      "who are you",
+      "what's your name",
+      "good morning",
+      "good afternoon",
+      "thank you"
+    ]
+  },
+  {
+    "type": "unknown",
+    "action": "unhandled",
+    "prompts": [
+      "what's the weather like",
+      "who is the president",
+      "book a flight for me",
+      "send an email",
+      "gibberish asdfjkl",
+      "how tall is mount everest",
+      "what's on my calendar"
     ]
   }
 ]
