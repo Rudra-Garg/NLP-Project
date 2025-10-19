@@ -19,6 +19,8 @@ if IS_WINDOWS:
 
 class VolumeControlAgent(IAgent):
     """An agent to control system volume across different operating systems."""
+    DEFAULT_VOLUME_CHANGE = 10
+    DEFAULT_VOLUME = 50
 
     def get_name(self) -> str:
         return "volume_control"
@@ -35,11 +37,11 @@ class VolumeControlAgent(IAgent):
                 return self._set_volume(int(level))
             
             elif action == "increase_volume":
-                amount = params.get("amount", 10) # Default to 10%
+                amount = params.get("amount", self.DEFAULT_VOLUME_CHANGE) # Default to 10%
                 return self._change_volume(int(amount))
 
             elif action == "decrease_volume":
-                amount = params.get("amount", 10) # Default to 10%
+                amount = params.get("amount", self.DEFAULT_VOLUME_CHANGE) # Default to 10%
                 return self._change_volume(-int(amount))
 
             else:
@@ -48,12 +50,13 @@ class VolumeControlAgent(IAgent):
         except Exception as e:
             print(f"[VolumeControlAgent] ERROR: {e}")
             return "I'm sorry, I couldn't adjust the volume."
+            return "I'm sorry, I couldn't adjust the volume."
 
     def _get_current_volume(self) -> int:
         """Gets the current system volume as a percentage (0-100)."""
         if IS_WINDOWS:
             devices = AudioUtilities.GetSpeakers()
-            interface = devices.Activate(IAudioudioEndpointVolume._iid_, CLSCTX_ALL, None)
+            interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
             volume = interface.QueryInterface(IAudioEndpointVolume)
             return int(volume.GetMasterVolumeLevelScalar() * 100)
         
@@ -64,7 +67,7 @@ class VolumeControlAgent(IAgent):
         elif IS_LINUX:
             result = subprocess.run(['amixer', 'sget', 'Master'], capture_output=True, text=True)
             line = [l for l in result.stdout.split('\n') if 'Front Left:' in l][0]
-            return int(line.split('[')[1].split('%]')[0])
+        return self.DEFAULT_VOLUME # Default fallback
         
         return 50 # Default fallback
 
