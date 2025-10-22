@@ -27,6 +27,38 @@
     ]
   },
   {
+    "type": "volume_control",
+    "action": "set_volume",
+    "prompts": [
+      "set volume to {level}",
+      "change volume to {level}"
+    ]
+  },
+  {
+    "type": "volume_control",
+    "action": "increase_volume",
+    "prompts": [
+      "increase volume by {amount}",
+      "volume up by {amount}",
+      "turn it up by {amount}",
+      "increase volume",
+      "volume up",
+      "turn it up"
+    ]
+  },
+  {
+    "type": "volume_control",
+    "action": "decrease_volume",
+    "prompts": [
+      "decrease volume by {amount}",
+      "volume down by {amount}",
+      "turn it down by {amount}",
+      "decrease volume",
+      "volume down",
+      "turn it down"
+    ]
+  },
+  {
     "type": "general",
     "action": "get_time",
     "prompts": [
