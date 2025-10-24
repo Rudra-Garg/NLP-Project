@@ -7,10 +7,22 @@
       "launch {app_name}",
       "start {app_name}",
       "run {app_name}",
-      "can you open {app_name} for me",
-      "please launch the {app_name} application",
+      "open up {app_name}",
+      "can you open {app_name}",
+      "please open {app_name}",
+      "i want to open {app_name}",
+      "start up {app_name}",
+      "fire up {app_name}",
+      "bring up {app_name}",
+      "execute {app_name}",
+      "could you launch {app_name}",
+      "please launch {app_name} for me",
       "i need to use {app_name}",
-      "show me the {app_name}"
+      "show me {app_name}",
+      "pull up {app_name}",
+      "load {app_name}",
+      "get {app_name} running",
+      "i need the {app_name} application"
     ]
   },
   {
@@ -23,7 +35,15 @@
       "evaluate {expression}",
       "tell me the answer to {expression}",
       "how much is {expression}",
-      "what's the result of {expression}"
+      "what's the result of {expression}",
+      "can you solve {expression}",
+      "give me the result of {expression}",
+      "please calculate {expression}",
+      "find the value of {expression}",
+      "work out {expression}",
+      "what does {expression} equal",
+      "i need the answer to {expression}",
+      "determine {expression}"
     ]
   },
   {
@@ -31,31 +51,81 @@
     "action": "set_volume",
     "prompts": [
       "set volume to {level}",
-      "change volume to {level}"
+      "change the volume to {level}",
+      "set audio to {level} percent",
+      "adjust volume to {level}",
+      "set sound to {level}",
+      "volume {level} percent please"
     ]
   },
   {
     "type": "volume_control",
     "action": "increase_volume",
     "prompts": [
-      "increase volume by {amount}",
-      "volume up by {amount}",
-      "turn it up by {amount}",
-      "increase volume",
+      "increase the volume",
+      "turn it up",
       "volume up",
-      "turn it up"
+      "make it louder",
+      "louder please",
+      "pump up the volume",
+      "increase audio"
     ]
   },
   {
     "type": "volume_control",
     "action": "decrease_volume",
     "prompts": [
-      "decrease volume by {amount}",
-      "volume down by {amount}",
-      "turn it down by {amount}",
-      "decrease volume",
+      "decrease the volume",
+      "turn it down",
       "volume down",
-      "turn it down"
+      "make it quieter",
+      "quieter please",
+      "lower the audio",
+      "it's too loud"
+    ]
+  },
+  {
+    "type": "volume_control",
+    "action": "mute_volume",
+    "prompts": [
+      "mute",
+      "mute the volume",
+      "silence",
+      "mute audio",
+      "turn off the sound"
+    ]
+  },
+  {
+    "type": "volume_control",
+    "action": "unmute_volume",
+    "prompts": [
+      "unmute",
+      "unmute the volume",
+      "restore audio",
+      "turn the sound back on",
+      "unmute audio"
+    ]
+  },
+  {
+    "type": "power_control",
+    "action": "shutdown",
+    "prompts": [
+      "shut down the computer",
+      "turn off the pc",
+      "shutdown now",
+      "power off the system",
+      "please shut down"
+    ]
+  },
+  {
+    "type": "power_control",
+    "action": "restart",
+    "prompts": [
+      "restart my computer",
+      "reboot the system",
+      "please restart",
+      "cycle the power",
+      "reboot now"
     ]
   },
   {
@@ -66,7 +136,9 @@
       "tell me the time",
       "what's the current time",
       "do you have the time",
-      "time please"
+      "time please",
+      "could you tell me the time",
+      "what is the time"
     ]
   },
   {
@@ -81,7 +153,11 @@
       "what's your name",
       "good morning",
       "good afternoon",
-      "thank you"
+      "thank you",
+      "what's up",
+      "how's it going",
+      "say something funny",
+      "let's chat"
     ]
   },
   {
@@ -89,12 +165,22 @@
     "action": "unhandled",
     "prompts": [
       "what's the weather like",
-      "who is the president",
-      "book a flight for me",
-      "send an email",
+      "who is the prime minister",
+      "book a flight for me to London",
+      "send an email to my boss",
       "gibberish asdfjkl",
       "how tall is mount everest",
-      "what's on my calendar"
+      "what's on my calendar for tomorrow",
+      "sing me a song",
+      "open the garage door",
+      "turn off the moon",
+      "where is mars right now",
+      "make me a sandwich",
+      "teleport me to paris",
+      "can you read my mind",
+      "what is the meaning of life",
+      "call me a taxi",
+      "write a poem about a robot"
     ]
   }
 ]

@@ -4,15 +4,15 @@ from .base_agent import IAgent
 
 
 class CalculationAgent(IAgent):
-    """An agent responsible for evaluating mathematical expressions."""
-
     def get_name(self) -> str:
         return "calculation"
 
     def execute(self, intent: dict) -> str:
         action = intent.get("action")
         params = intent.get("parameters", {})
-        expression = params.get("expression")
+
+        # The expression is now passed as a parameter from the NER model
+        expression = params.get("MATH_EXPRESSION")
 
         if action != "evaluate_expression":
             return "I don't know how to perform that calculation action."
@@ -20,12 +20,16 @@ class CalculationAgent(IAgent):
         if not expression:
             return "You asked me to calculate something, but didn't provide an expression."
 
-        print(f"[CalculationAgent] Evaluating expression: '{expression}'")
+        # Clean up the expression for numexpr
+        # Replace words with symbols
+        expression = expression.lower().replace("plus", "+").replace("minus", "-")
+        expression = expression.replace("times", "*").replace("divided by", "/")
+        expression = expression.replace("x", "*")  # common spoken alternative for 'times'
+
+        print(f"[CalculationAgent] Evaluating cleaned expression: '{expression}'")
 
         try:
-            # Use numexpr to safely evaluate the expression
             result = numexpr.evaluate(expression)
-            # Use .item() to convert numpy types to native Python types
             answer = f"The answer is {result.item()}"
             print(f"[CalculationAgent] Evaluation successful. Responding with: \"{answer}\"")
             return answer

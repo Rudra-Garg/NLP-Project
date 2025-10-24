@@ -25,3 +25,8 @@ numexpr
 
 piper-tts
 
+pycaw
+
+spacy
+
+sklearn-crfsuite

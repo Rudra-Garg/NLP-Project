@@ -12,6 +12,7 @@ from pvporcupine import create
 from agent_manager import AgentManager
 from agents import CalculationAgent, SystemControlAgent, VolumeControlAgent
 from intent import FastClassifier, LLMClassifier
+from ner_predictor import NERPredictor
 from tts import PiperTTSNative
 from tts_manager import TTSManager
 
@@ -61,6 +62,8 @@ def main():
     intents_json_path = project_root / INTENTS_JSON_PATH
     piper_model_path = str(project_root / PIPER_MODEL_PATH)
 
+    ner_model_path = project_root / "models" / "ner" / "ner_model.joblib"
+    ner_predictor = NERPredictor(ner_model_path)
     porcupine = create(
         access_key=ACCESS_KEY,
         model_path=porcupine_model_path,
@@ -153,6 +156,16 @@ def main():
                         print("Fast path failed. Falling back to LLM Classifier...")
                         intent = llm_classifier.classify(transcription)
                         print(f'--> LLM Path Intent: {intent}')
+
+                    # 2. If the intent is understood, run NER to extract entities
+                    if intent['type'] != 'unknown':
+                        entities = ner_predictor.predict(transcription)
+                        print(f'--> NER Entities Found: {entities}')
+
+                        # 3. Merge the extracted entities into the intent's parameters
+                        # This creates the final, complete "understanding" of the command
+                        intent['parameters'].update(entities)
+                        print(f'--> Final Intent with Entities: {intent}')
 
                     response_text = agent_manager.dispatch(intent)
                     print(f'--> LOKI says: "{response_text}"')
