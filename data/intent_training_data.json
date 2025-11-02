@@ -1,338 +1,53 @@
 [
   {
-    "text": "okay what time is it please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "hey loki can you read my mind",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "tell me a joke",
+    "text": "can you tell me a story for me",
     "type": "general",
     "action": "conversation"
   },
   {
-    "text": "alright decrease the volume for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
+    "text": "okay make me a sandwich for me",
+    "type": "unknown",
+    "action": "unhandled"
   },
   {
-    "text": "how much is 100 divided by 5",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay pump up the volume if you could",
+    "text": "make it louder please",
     "type": "volume_control",
     "action": "increase_volume"
   },
   {
-    "text": "can you sing me a song",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you do you have the time now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "send an email to my boss please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay run calculator",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you what is 100 divided by 5 for me",
+    "text": "find the value of sine of 90 degrees please",
     "type": "calculation",
     "action": "evaluate_expression"
   },
   {
-    "text": "could you increase audio please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay execute File Explorer now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you launch System Preferences for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright turn off the pc now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "decrease the volume",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "quieter please please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "calculate 100 divided by 5",
+    "text": "give me the result of 100 divided by 5 for me",
     "type": "calculation",
     "action": "evaluate_expression"
   },
   {
-    "text": "could you please calculate log of 100 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "tell me the time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "can you get File Explorer running for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright compute 2 plus 2 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki unmute",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "please book a flight for me to London",
+    "text": "hey loki what is the meaning of life now",
     "type": "unknown",
     "action": "unhandled"
   },
   {
-    "text": "please good morning for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "start up excel",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "please write a poem about a robot now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please make it quieter for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "please restart",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "alright open the garage door for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright could you tell me the time for me",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "hey loki tell me a joke please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you shutdown now for me",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "what's your name",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you tell me a joke",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please increase audio for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "turn off the pc",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "can you what's up please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki time please please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "could you can you open blender if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you what's the current time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "please shutdown now if you could",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "could you call me a taxi if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay increase audio if you could",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "load System Preferences if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "it's too loud",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "hey loki open up zoom now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "what's up please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki set audio to 0 percent",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "can you increase audio please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay start up photoshop if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you how are you doing now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you launch Terminal",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "turn it up",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "please how's it going if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay work out (10 + 5) * 3 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please what's the result of 19 minus 7 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki book a flight for me to London",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please it's too loud if you could",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "please evaluate 2 to the power of 8",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright i need the answer to 50 percent of 200 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki gibberish asdfjkl now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay mute audio for me",
+    "text": "turn off the sound for me",
     "type": "volume_control",
     "action": "mute_volume"
   },
   {
-    "text": "set volume to 30",
+    "text": "can you set sound to 30 percent",
     "type": "volume_control",
     "action": "set_volume"
   },
   {
-    "text": "okay increase the volume now",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "launch notepad if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "call me a taxi",
+    "text": "could you write a poem about a robot",
     "type": "unknown",
     "action": "unhandled"
+  },
+  {
+    "text": "can you turn the sound back on now",
+    "type": "volume_control",
+    "action": "unmute_volume"
   },
   {
     "text": "alright write a poem about a robot",
@@ -340,89 +55,159 @@
     "action": "unhandled"
   },
   {
-    "text": "hey loki mute the volume please",
-    "type": "volume_control",
-    "action": "mute_volume"
+    "text": "can you restart my computer for me",
+    "type": "power_control",
+    "action": "restart"
   },
   {
-    "text": "can you teleport me to paris now",
+    "text": "could you send an email to my boss now",
     "type": "unknown",
     "action": "unhandled"
   },
   {
-    "text": "please what is the time for me",
-    "type": "general",
-    "action": "get_time"
+    "text": "okay lower the audio please",
+    "type": "volume_control",
+    "action": "decrease_volume"
   },
   {
-    "text": "time please if you could",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "please open word",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "what is the time now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "please what's the current time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "tell me a story",
+    "text": "okay good afternoon if you could",
     "type": "general",
     "action": "conversation"
   },
   {
-    "text": "could you do you have the time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "hey loki please open System Preferences please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "volume 0 percent please for me",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "can you where is mars right now for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki how much is log of 100 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you fire up visual studio now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "make it louder now",
+    "text": "please increase the volume now",
     "type": "volume_control",
     "action": "increase_volume"
   },
   {
-    "text": "could you can you open calculator for me",
+    "text": "hey loki determine 2 to the power of 8 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki make it quieter for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "hey loki sing me a song for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you give me the result of sine of 90 degrees now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "please can you read my mind now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you set volume to 0 for me",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "okay how tall is mount everest if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "unmute the volume for me",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "bring up visual studio please",
     "type": "system_control",
     "action": "launch_application"
   },
   {
-    "text": "please what's the result of 100 divided by 5 if you could",
+    "text": "could you silence please",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "could you launch control panel",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright please restart please",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "hey loki send an email to my boss",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please change the volume to 50 if you could",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "alright please launch zoom for me if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "change the volume to 90 percent",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "evaluate 5 times 8 for me",
     "type": "calculation",
     "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki make it quieter if you could",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "can you mute for me",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "call me a taxi if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright set audio to 30 percent percent",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "alright pull up Terminal for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "increase audio for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "power off the system",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "okay work out 100 divided by 5 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright volume 50 percent percent please for me",
+    "type": "volume_control",
+    "action": "set_volume"
   },
   {
     "text": "could you tell me the time",
@@ -430,217 +215,7 @@
     "action": "get_time"
   },
   {
-    "text": "alright lower the audio",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you get System Preferences running please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright get slack running now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright say something funny now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay open excel",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki can you read my mind now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright change the volume to 30 if you could",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "could you open photoshop if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki turn the sound back on",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "can you turn off the moon for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright please launch control panel for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you could you tell me the time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "restore audio",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "could you time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "power off the system now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "alright turn the sound back on if you could",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "alright determine the square root of 144 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "open the garage door",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "good morning",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay could you tell me the time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "okay louder please please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "can you lower the audio please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "okay cycle the power if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "what is the meaning of life",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay unmute audio for me",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "please what does 50 percent of 200 equal now",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright adjust volume to 10",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "please start notepad for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki power off the system for me",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "please where is mars right now for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "volume up if you could",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "please please open photoshop now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "evaluate log of 100",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you restart my computer please",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "can you execute blender",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "okay decrease the volume please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "okay shut down the computer if you could",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "what time is it if you could",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "who are you",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright quieter please for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you open the garage door",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki let's chat for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you teleport me to paris",
+    "text": "can you can you read my mind please",
     "type": "unknown",
     "action": "unhandled"
   },
@@ -650,539 +225,9 @@
     "action": "launch_application"
   },
   {
-    "text": "lower the audio",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "could you set volume to 40 if you could",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "how's it going for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you mute audio for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "sing me a song",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki let's chat if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you call me a taxi",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you open the garage door now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay compute 2 to the power of 8 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "reboot the system for me",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "turn off the sound",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "alright reboot now now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "alright what's up if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay tell me the answer to what is 3 factorial now",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay it's too loud",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "alright write a poem about a robot please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you what's the weather like",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please what is the time now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "okay good afternoon",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you i need to use chrome please",
+    "text": "hey loki start control panel please",
     "type": "system_control",
     "action": "launch_application"
-  },
-  {
-    "text": "alright teleport me to paris please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay turn it down",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "determine 2 plus 2 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright who are you for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "volume 80 percent please",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "launch task manager",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "okay what is 2 plus 2 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "could you unmute the volume if you could",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "open up firefox",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "how's it going",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please quieter please please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "hey loki could you launch spotify if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright can you open slack for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "volume down for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "i need the gimp application",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you open Terminal if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "start steam for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you it's too loud",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "turn off the moon",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please how tall is mount everest now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "i need the blender application",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you pump up the volume if you could",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay turn off the pc for me",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "okay thank you now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please launch chrome for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright what's up",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you volume 60 percent please for me",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "could you find the value of log of 100 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "could you tell me the time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "can you adjust volume to 0 if you could",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "alright what is the meaning of life now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "book a flight for me to London",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please who are you now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please volume up",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "hey loki what is the meaning of life please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay decrease the volume for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "alright make it quieter",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "okay i want to open steam",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "cycle the power",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "please launch spotify please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "volume 90 percent please",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "please silence for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "can you read my mind if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please compute 5 times 8",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay i need to use control panel now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "what does 5 times 8 equal",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "increase the volume",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay decrease the volume please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "please shutdown now please",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "hey loki do you have the time now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "okay gibberish asdfjkl please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please where is mars right now for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki increase the volume",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "say something funny",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you open up visual studio please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "run steam",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you fire up steam if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "shut down the computer now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "could you i want to open Terminal for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright make me a sandwich if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you find the value of 2 plus 2 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "tell me the time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "okay run gimp please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "what is the time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "alright how are you doing please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki please shut down please",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "could you good afternoon",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you what's on my calendar for tomorrow",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "evaluate 50 percent of 200 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you cycle the power please",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "can you please restart if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "what time is it",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "send an email to my boss",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "unmute audio",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "hey loki please calculate (10 + 5) * 3",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please open up task manager",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "write a poem about a robot",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you cycle the power now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "what time is it now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "alright please calculate 5 times 8 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay gibberish asdfjkl now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "what's the weather like",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki cycle the power now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "alright who is the prime minister",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please volume up please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay mute audio for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "compute 50 percent of 200 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
   },
   {
     "text": "can you open firefox",
@@ -1190,884 +235,29 @@
     "action": "launch_application"
   },
   {
-    "text": "call me a taxi for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you teleport me to paris please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "open up blender",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki what does log of 100 equal now",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright pull up discord",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "find the value of sine of 90 degrees",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki restore audio now",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "alright could you launch steam if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "reboot the system now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "okay open the garage door please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you good afternoon please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you give me the result of 5 times 8 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "make me a sandwich please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "tell me the answer to log of 100",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "louder please for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "can you can you solve 50 percent of 200 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay tell me a joke if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you send an email to my boss",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "gibberish asdfjkl",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you what's the weather like",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "mute",
+    "text": "mute audio",
     "type": "volume_control",
     "action": "mute_volume"
   },
   {
-    "text": "can you how tall is mount everest now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you tell me the time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "okay let's chat if you could",
+    "text": "hey loki who are you please",
     "type": "general",
     "action": "conversation"
   },
   {
-    "text": "volume up",
-    "type": "volume_control",
-    "action": "increase_volume"
+    "text": "alright who is the prime minister if you could",
+    "type": "unknown",
+    "action": "unhandled"
   },
   {
-    "text": "hey loki volume down now",
+    "text": "how much is 19 minus 7",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "please quieter please please",
     "type": "volume_control",
     "action": "decrease_volume"
-  },
-  {
-    "text": "could you volume 70 percent please now",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "alright load steam",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright give me the result of 19 minus 7 now",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright i want to open chrome if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright silence for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "please get steam running please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright please restart for me",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "could you please launch zoom for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you launch task manager",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you pull up notepad please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki turn off the sound please",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "alright how much is 5 times 8 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright restore audio please",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "can you work out what is 3 factorial for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright fire up discord for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "how are you doing",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki shut down the computer please",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "let's chat",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright what is the meaning of life for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "mute the volume for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "set audio to 30 percent percent",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "alright show me System Preferences now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "louder please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "please make it quieter now",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "turn off the moon now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki what's the current time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "do you have the time now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "alright sing me a song please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay reboot now if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "could you calculate log of 100 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you what's on my calendar for tomorrow",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you pull up blender now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright what's the weather like now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you increase audio",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "alright who is the prime minister",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay can you read my mind",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay give me the result of the square root of 144 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please can you solve 19 minus 7",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki find the value of 50 percent of 200 now",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you how's it going now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki open vscode now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "who is the prime minister please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright it's too loud for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "alright how are you doing for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "lower the audio",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you evaluate 100 divided by 5",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay what is the time now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "can you show me steam if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki mute for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "hey loki good afternoon if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright how are you",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay set audio to 50 percent percent",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "thank you",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please i need the answer to 2 plus 2",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "set volume to 10",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "hey loki tell me the time for me",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "run visual studio",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "what time is it for me",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "alright thank you please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please shut down for me",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "okay reboot now if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "okay please restart",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "alright increase the volume please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "i need to use vscode",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "run chrome",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright write a poem about a robot if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki turn off the sound",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "can you shutdown now please",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "please please restart for me",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "can you please shut down if you could",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "alright do you have the time if you could",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "could you i need the chrome application for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "unmute",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "show me photoshop",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki what does what is 3 factorial equal now",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "where is mars right now please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please mute please",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "okay say something funny please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki it's too loud now",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "hey loki can you solve 5 times 8 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you change the volume to 60 now",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "could you write a poem about a robot if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright louder please now",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay lower the audio now",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "hey loki shut down the computer now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "hey loki compute what is 3 factorial",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "i need to use gimp",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki make it quieter",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "okay unmute audio please",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "give me the result of log of 100",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "could you unmute audio for me",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "start vscode",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you turn it down",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "please how are you",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright how much is what is 3 factorial if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright turn off the moon please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you can you solve 2 plus 2 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay volume down please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "volume up please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "start up control panel",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "i need the answer to the square root of 144",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "could you where is mars right now for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "turn it down",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you send an email to my boss please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "what's the result of 2 to the power of 8",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki thank you if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright what time is it",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "how are you for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "tell me the time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "hey loki adjust volume to 30",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "evaluate 5 times 8 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "power off the system",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "okay how's it going now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay call me a taxi",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please unmute please",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "alright turn off the pc now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "can you show me spotify please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you calculate 50 percent of 200 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please good morning if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki who is the prime minister for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you work out 5 times 8",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "unmute the volume for me",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "alright tell me a story now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "how are you if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "how are you",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please volume up for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "do you have the time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "hey loki turn it up for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "start up zoom",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "what's the weather like now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you silence for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "alright what is log of 100 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please what's on my calendar for tomorrow",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "turn it down if you could",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "could you say something funny now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "hey loki change the volume to 90",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "who are you please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "please sing me a song now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki silence now",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "good afternoon",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you launch discord",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "please silence if you could",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "hey loki say something funny",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "send an email to my boss please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright pump up the volume for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "can you turn off the moon",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "what's the result of what is 3 factorial",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "change the volume to 100",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "hey loki open calculator",
-    "type": "system_control",
-    "action": "launch_application"
   },
   {
     "text": "where is mars right now",
@@ -2075,539 +265,54 @@
     "action": "unhandled"
   },
   {
-    "text": "alright thank you please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "start up firefox",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki start visual studio now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you turn it up now",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay please launch slack for me please",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you can you solve sine of 90 degrees if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "mute the volume",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "please call me a taxi now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please can you open photoshop for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "reboot now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "could you please restart",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "alright good afternoon",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "unmute audio please",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "okay reboot the system for me",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "hey loki what's on my calendar for tomorrow for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please load notepad for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you read my mind",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "shut down the computer",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "okay turn it up",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "make me a sandwich",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "pump up the volume",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay power off the system",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "can you mute if you could",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "alright bring up spotify now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you mute the volume for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "could you volume down if you could",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "hey loki find the value of 2 to the power of 8 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay louder please if you could",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "hey loki what's your name now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright increase the volume please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "fire up System Preferences",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright please shut down if you could",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "hey loki tell me the time if you could",
+    "text": "can you what is the time now",
     "type": "general",
     "action": "get_time"
   },
   {
-    "text": "okay power off the system please",
+    "text": "okay set audio to 10 percent now",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "what's on my calendar for tomorrow",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright what does 50 percent of 200 equal please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki write a poem about a robot if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright shut down the computer for me",
     "type": "power_control",
     "action": "shutdown"
   },
   {
-    "text": "hey loki adjust volume to 20 now",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "alright reboot the system if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "pull up visual studio",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you tell me the answer to the square root of 144 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "turn the sound back on",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "please work out 19 minus 7 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "show me calculator",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "get blender running",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright mute the volume now",
+    "text": "turn off the sound",
     "type": "volume_control",
     "action": "mute_volume"
   },
   {
-    "text": "alright how tall is mount everest",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "unmute audio",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "hey loki fire up spotify",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "turn it up please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "execute Activity Monitor if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "could you bring up chrome if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you restart my computer please",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "alright turn off the pc now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "please please calculate 2 to the power of 8",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "alright make me a sandwich if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you how much is the square root of 144 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki what's your name",
+    "text": "alright tell me a story please",
     "type": "general",
     "action": "conversation"
   },
   {
-    "text": "please how are you now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you calculate the square root of 144 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki tell me the answer to 50 percent of 200 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you turn it down if you could",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you how tall is mount everest for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki unmute the volume",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "hey loki quieter please for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "please restart my computer now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "can you make me a sandwich if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please mute audio for me",
+    "text": "could you mute please",
     "type": "volume_control",
     "action": "mute_volume"
   },
   {
-    "text": "can you what's the weather like now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay tell me a story for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki load calculator now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "hey loki tell me a story if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright what does (10 + 5) * 3 equal",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please set volume to 30 percent for me",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "alright book a flight for me to London",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "make it louder",
+    "text": "make it louder now",
     "type": "volume_control",
     "action": "increase_volume"
-  },
-  {
-    "text": "hey loki gibberish asdfjkl for me",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright let's chat now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay turn it up please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "what is the meaning of life now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "can you what's the current time for me",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "alright work out the square root of 144 now",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "can you set sound to 70",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "can you make it louder if you could",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "please what's the result of log of 100 if you could",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "mute for me",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "can you restore audio now",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "hey loki teleport me to paris",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay please shut down now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "alright make it louder for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "hey loki restart my computer if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "hey loki could you tell me the time please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "cycle the power now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "set audio to 80 percent for me",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "can you lower the audio if you could",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you bring up gimp",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you restart my computer please",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "determine 5 times 8",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "okay set sound to 50 now",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "volume down for me",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "hey loki who are you now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "i need the word application",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "please tell me a story please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you tell me a story now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright tell me a joke please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki unmute the volume please",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "alright what is the meaning of life please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "increase audio",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "alright mute audio now",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "okay make it quieter if you could",
-    "type": "volume_control",
-    "action": "decrease_volume"
   },
   {
     "text": "who is the prime minister",
@@ -2615,207 +320,37 @@
     "action": "unhandled"
   },
   {
-    "text": "i need the answer to 100 divided by 5",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please what is the time now",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "can you please calculate what is 3 factorial",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki start word if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "silence",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "can you turn off the sound",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "could you power off the system for me",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "please open discord",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "please i need to use System Preferences now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "please reboot now if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "please what's on my calendar for tomorrow now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you i want to open System Preferences for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "alright tell me the answer to 5 times 8 please",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "hey loki please open firefox if you could",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "reboot the system",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "can you make me a sandwich now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please can you read my mind if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "mute audio",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "could you louder please for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "okay set volume to 20 for me",
+    "text": "please change the volume to 10 percent please",
     "type": "volume_control",
     "action": "set_volume"
   },
   {
-    "text": "good morning if you could",
-    "type": "general",
-    "action": "conversation"
+    "text": "please increase audio if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
   },
   {
-    "text": "how tall is mount everest",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "restart my computer",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "please shutdown now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "can you bring up File Explorer if you could",
+    "text": "could you launch zoom",
     "type": "system_control",
     "action": "launch_application"
   },
   {
-    "text": "hey loki quieter please please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you thank you if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "alright restore audio now",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "please turn off the sound now",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "hey loki bring up visual studio please",
+    "text": "please please open firefox if you could",
     "type": "system_control",
     "action": "launch_application"
   },
   {
-    "text": "okay what's your name if you could",
+    "text": "can you increase the volume for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please tell me a joke",
     "type": "general",
     "action": "conversation"
   },
   {
-    "text": "can you what's up if you could",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "how tall is mount everest please",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please shut down",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "okay restore audio now",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "unmute the volume",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "okay unmute",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "execute calculator now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you let's chat for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "could you unmute the volume if you could",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "alright set sound to 50 percent now",
+    "text": "could you change the volume to 70",
     "type": "volume_control",
     "action": "set_volume"
   },
@@ -2825,257 +360,22 @@
     "action": "get_time"
   },
   {
-    "text": "determine 19 minus 7 for me",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "adjust volume to 90 percent",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "could you time please please",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "quieter please",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "turn the sound back on now",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "make it quieter",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "calculate (10 + 5) * 3",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please launch zoom please",
+    "text": "alright please open Activity Monitor if you could",
     "type": "system_control",
     "action": "launch_application"
   },
   {
-    "text": "alright send an email to my boss",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "teleport me to paris",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright set sound to 90 percent for me",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "could you turn the sound back on",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "determine log of 100",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please who is the prime minister now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "alright make it louder for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "alright shut down the computer for me",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "please turn off the sound now",
+    "text": "hey loki mute the volume now",
     "type": "volume_control",
     "action": "mute_volume"
   },
   {
-    "text": "please reboot now now",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "make it louder for me",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "hey loki increase the volume if you could",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "could you mute please",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "load zoom for me",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "i want to open blender",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "okay gibberish asdfjkl",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "hey loki how's it going please",
+    "text": "can you how's it going please",
     "type": "general",
     "action": "conversation"
   },
   {
-    "text": "good morning now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "hey loki pump up the volume please",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "please who are you now",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "volume down",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "tell me a joke please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "what's on my calendar for tomorrow",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please what is 2 to the power of 8",
-    "type": "calculation",
-    "action": "evaluate_expression"
-  },
-  {
-    "text": "please what's your name",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "can you unmute for me",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "pull up task manager",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "can you mute the volume now",
-    "type": "volume_control",
-    "action": "mute_volume"
-  },
-  {
-    "text": "change the volume to 40",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "okay say something funny for me",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "okay what's the current time",
-    "type": "general",
-    "action": "get_time"
-  },
-  {
-    "text": "can you unmute for me",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "okay sing me a song if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "please launch Terminal for me now",
-    "type": "system_control",
-    "action": "launch_application"
-  },
-  {
-    "text": "shutdown now",
-    "type": "power_control",
-    "action": "shutdown"
-  },
-  {
-    "text": "hey loki turn off the moon if you could",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "could you reboot the system if you could",
-    "type": "power_control",
-    "action": "restart"
-  },
-  {
-    "text": "can you decrease the volume if you could",
-    "type": "volume_control",
-    "action": "decrease_volume"
-  },
-  {
-    "text": "can you set sound to 60 for me",
-    "type": "volume_control",
-    "action": "set_volume"
-  },
-  {
-    "text": "hey loki pump up the volume",
-    "type": "volume_control",
-    "action": "increase_volume"
-  },
-  {
-    "text": "how are you doing please",
-    "type": "general",
-    "action": "conversation"
-  },
-  {
-    "text": "turn the sound back on please",
-    "type": "volume_control",
-    "action": "unmute_volume"
-  },
-  {
-    "text": "can you turn it down if you could",
+    "text": "alright quieter please for me",
     "type": "volume_control",
     "action": "decrease_volume"
   },
@@ -3085,34 +385,574 @@
     "action": "conversation"
   },
   {
-    "text": "hey loki good morning if you could",
+    "text": "can you how tall is mount everest",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright good morning",
     "type": "general",
     "action": "conversation"
   },
   {
-    "text": "set audio to 10 percent",
+    "text": "teleport me to paris if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay quieter please",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "could you do you have the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please it's too loud now",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please adjust volume to 30 percent if you could",
     "type": "volume_control",
     "action": "set_volume"
   },
   {
-    "text": "hey loki i need the answer to sine of 90 degrees please",
-    "type": "calculation",
-    "action": "evaluate_expression"
+    "text": "please what is the time",
+    "type": "general",
+    "action": "get_time"
   },
   {
-    "text": "can you book a flight for me to London now",
-    "type": "unknown",
-    "action": "unhandled"
-  },
-  {
-    "text": "okay turn off the pc please",
+    "text": "alright power off the system if you could",
     "type": "power_control",
     "action": "shutdown"
   },
   {
-    "text": "open the garage door now",
+    "text": "can you open notepad now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki make it louder for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "volume down if you could",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please set sound to 40 please",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "alright open the garage door now",
     "type": "unknown",
     "action": "unhandled"
+  },
+  {
+    "text": "can you tell me the answer to what is 3 factorial for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "work out what is 3 factorial",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you reboot the system now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "make me a sandwich now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay turn off the pc for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "okay pump up the volume",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "alright volume 70 percent please please",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "alright please calculate log of 100 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you solve sine of 90 degrees",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you open spotify",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright calculate 19 minus 7 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you send an email to my boss now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you gibberish asdfjkl if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you make it quieter for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please open the garage door",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright compute 50 percent of 200 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "please reboot now now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright write a poem about a robot now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay turn off the moon now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "tell me a joke",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "bring up chrome",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please cycle the power now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "can you decrease the volume",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please restart",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "hey loki it's too loud for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please please calculate 50 percent of 200 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright louder please please",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "okay turn off the sound if you could",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "could you evaluate the square root of 144",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "mute the volume",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "hey loki what's the current time for me",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "okay good morning now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you quieter please for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "hey loki mute audio",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "pump up the volume",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please silence now",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "okay can you solve 19 minus 7 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "get spotify running",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you what is the meaning of life for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki please launch Activity Monitor for me if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please evaluate 2 to the power of 8 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you read my mind now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "time please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "could you set sound to 50",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "tell me the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "start up notepad if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "find the value of 2 plus 2",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "please say something funny if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright unmute",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "what's up",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "unmute the volume",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "volume up",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "okay say something funny for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright do you have the time for me",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please unmute audio if you could",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "start up firefox please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay determine sine of 90 degrees please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "i need the vscode application",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "calculate (10 + 5) * 3",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "it's too loud",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "volume up please",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "mute audio please",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "hey loki restart my computer",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "open blender",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please mute please",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "set volume to 50",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "lower the audio",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "can you determine 5 times 8 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "say something funny",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "what does (10 + 5) * 3 equal if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki power off the system please",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "please how's it going now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you what's on my calendar for tomorrow now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay what's the result of 2 to the power of 8 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright how are you doing now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you adjust volume to 30",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "please shut down for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "open the garage door",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright call me a taxi",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "volume down now",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "okay turn the sound back on please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "okay what is the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "hey loki get task manager running now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay can you read my mind for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please launch calculator for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay show me System Preferences please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "evaluate 2 plus 2 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "tell me a story please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright how much is (10 + 5) * 3 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "okay bring up spotify please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please please calculate 5 times 8 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright turn it up for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "could you what's the weather like",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright pull up spotify now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you teleport me to paris",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "book a flight for me to London",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki open up photoshop now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "i want to open visual studio",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "start firefox",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "fire up Activity Monitor",
+    "type": "system_control",
+    "action": "launch_application"
   },
   {
     "text": "alright what's your name please",
@@ -3120,29 +960,2189 @@
     "action": "conversation"
   },
   {
+    "text": "okay shutdown now if you could",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "could you turn it down please",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "alright decrease the volume for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "cycle the power for me",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "could you pull up gimp now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright turn it down please",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "could you sing me a song now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay unmute audio please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "please good morning please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "hey loki reboot now now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "hey loki mute",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "please where is mars right now please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please run task manager if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay tell me a joke please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "okay let's chat",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "adjust volume to 70",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "alright pull up photoshop if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki load Terminal if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki what's the current time now",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "decrease the volume",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "what's the result of the square root of 144",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki what's up please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "hey loki start Activity Monitor now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "mute audio for me",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "okay tell me a story for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright volume down if you could",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "could you silence please",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "okay i want to open File Explorer now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you who is the prime minister now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki increase audio now",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please let's chat",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "okay turn it up please",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you pump up the volume if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you open zoom",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki how much is 100 divided by 5 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "could you load control panel",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay who are you please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "okay i need to use excel if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please say something funny please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you could you launch chrome",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki what is 50 percent of 200",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright mute the volume please",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "can you what is the meaning of life",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright make it quieter if you could",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "can you turn off the sound now",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "set audio to 90 percent",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "can you what's your name if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you turn the sound back on if you could",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "okay please calculate 100 divided by 5",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright restart my computer for me",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "okay what is log of 100 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "okay open the garage door for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "how are you doing",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "decrease the volume",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "could you good afternoon if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you what does 100 divided by 5 equal",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you solve 2 plus 2",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki launch Activity Monitor now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki bring up word if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "load blender",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "what is the meaning of life",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you launch visual studio please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright tell me a joke",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you read my mind",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please it's too loud if you could",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "okay get File Explorer running",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you turn it down for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "what's the result of 100 divided by 5 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "pull up File Explorer",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you volume up for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please turn off the sound please",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "can you turn off the pc for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "i need the answer to log of 100",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "get excel running",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright how are you now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you please launch discord for me please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright launch vscode now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "lower the audio please",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "louder please if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you lower the audio for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "call me a taxi",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright what does the square root of 144 equal now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "please what time is it please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "can you solve 50 percent of 200",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki execute notepad",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay restore audio if you could",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "show me slack",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "how much is 50 percent of 200 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright good afternoon",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you please shut down for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "run discord",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you pump up the volume now",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you unmute the volume if you could",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "okay call me a taxi",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you reboot now for me",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "hey loki turn it up if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "hey loki who is the prime minister now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki cycle the power if you could",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "please gibberish asdfjkl for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "volume up for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "increase the volume",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "cycle the power please",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright silence now",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "could you how tall is mount everest",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "what's the weather like if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "what time is it if you could",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "set volume to 80 for me",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "sing me a song",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay silence",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "hey loki time please now",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "cycle the power",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright please restart now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright i need the File Explorer application for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay bring up vscode for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright what's on my calendar for tomorrow please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "mute",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "can you what's your name for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "please what's up for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "increase audio if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you run notepad now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "how are you",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "hey loki let's chat now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "okay can you read my mind now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright open up zoom please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "good afternoon",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "i want to open zoom now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please mute audio",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "okay time please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "okay do you have the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "alright volume up",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please louder please if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you launch firefox",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you increase audio for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "cycle the power",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "can you send an email to my boss",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please execute chrome",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you load visual studio",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "calculate what is 3 factorial",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "please volume 10 percent please for me",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "adjust volume to 70 percent",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "turn off the sound",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "alright where is mars right now for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "open up gimp",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki could you tell me the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please restart my computer now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright increase the volume now",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please what's the current time for me",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please reboot the system",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "adjust volume to 90",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "could you power off the system now",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "could you please calculate (10 + 5) * 3",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki how's it going for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "make it quieter if you could",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "give me the result of what is 3 factorial",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "reboot now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright start excel for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay compute the square root of 144 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "could you could you tell me the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "hey loki increase the volume now",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "i need the photoshop application",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please give me the result of 50 percent of 200",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "how are you",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "hey loki load File Explorer",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "fire up System Preferences",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "shut down the computer",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "hey loki say something funny if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "do you have the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "can you unmute audio",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "can you open up task manager for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "tell me a story now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright volume 30 percent percent please please",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "could you how are you please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "okay i need to use spotify if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you evaluate (10 + 5) * 3 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "okay open the garage door please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you let's chat now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "what's the result of 19 minus 7",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "could you let's chat",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright what's the current time if you could",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please write a poem about a robot now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you calculate 2 plus 2 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "could you how are you doing if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright what's on my calendar for tomorrow for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay sing me a song if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "shutdown now",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "can you launch slack",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki thank you now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "unmute",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "hey loki volume down please",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "can you i need to use word for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please please open task manager",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright what's the weather like",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "open up discord if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you shut down the computer please",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "hey loki make it louder if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "alright restore audio if you could",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "could you what's your name",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright mute if you could",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "could you turn it up please",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "who is the prime minister",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "launch System Preferences",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you please shut down for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "fire up notepad",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "execute blender",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you compute 5 times 8 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki how tall is mount everest",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "gibberish asdfjkl please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you what's your name now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you how are you doing for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "please what's the result of log of 100 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "okay shutdown now if you could",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
     "text": "what's the current time",
     "type": "general",
     "action": "get_time"
   },
   {
-    "text": "can you execute steam please",
-    "type": "system_control",
-    "action": "launch_application"
+    "text": "restart my computer",
+    "type": "power_control",
+    "action": "restart"
   },
   {
-    "text": "alright book a flight for me to London for me",
+    "text": "alright tell me the time please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "okay what time is it",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "okay set sound to 50 percent for me",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "okay unmute the volume please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "can you reboot the system if you could",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright turn off the pc for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "alright can you solve 5 times 8 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "unmute audio",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "could you decrease the volume now",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "hey loki tell me the answer to 2 to the power of 8",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "what is 2 plus 2",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "what is the meaning of life now",
     "type": "unknown",
     "action": "unhandled"
   },
   {
-    "text": "can you what is what is 3 factorial please",
+    "text": "turn off the pc",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "can you what's on my calendar for tomorrow",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay turn off the pc for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "could you turn it up now",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you restart my computer if you could",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "could you shut down the computer please",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "what's the weather like if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "gibberish asdfjkl please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you it's too loud now",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please turn off the moon please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "let's chat",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright gibberish asdfjkl now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "volume down",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "who are you",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "please what's up",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "please please launch photoshop for me if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright how are you if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "turn the sound back on if you could",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "write a poem about a robot",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you what's the weather like please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you i need the answer to sine of 90 degrees for me",
     "type": "calculation",
     "action": "evaluate_expression"
   },
   {
-    "text": "alright give me the result of 2 to the power of 8",
+    "text": "okay tell me the answer to log of 100",
     "type": "calculation",
     "action": "evaluate_expression"
+  },
+  {
+    "text": "can you tell me the answer to 50 percent of 200 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "set audio to 50 percent percent for me",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "alright do you have the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "alright i need the gimp application please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "run System Preferences",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "restore audio",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "what's the current time please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please who are you",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you who are you now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you volume down",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please mute the volume",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "work out (10 + 5) * 3",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "okay restore audio",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "hey loki quieter please",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "what's the weather like",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "sing me a song",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "set sound to 100",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "okay thank you for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "make me a sandwich now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki thank you now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright book a flight for me to London",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay book a flight for me to London",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "alright unmute please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "can you time please if you could",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "silence",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "please what is the time if you could",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "reboot now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright please shut down now",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "can you power off the system please",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "can you reboot now please",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "could you open Activity Monitor for me",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "restore audio for me",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "could you what time is it if you could",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please do you have the time please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "alright thank you",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "hey loki open chrome if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you find the value of 19 minus 7 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright set volume to 100 for me",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "can you where is mars right now now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay mute the volume for me",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "could you tell me the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "alright determine 19 minus 7 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "decrease the volume for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "alright power off the system if you could",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "how's it going",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "quieter please",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "alright tell me the time now",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "can you open discord",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please how much is what is 3 factorial now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki book a flight for me to London please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please unmute audio please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "please louder please for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please work out 50 percent of 200 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "send an email to my boss",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you volume 20 percent please if you could",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "alright shut down the computer",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "can you turn it down now",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please i need to use gimp please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "please fire up File Explorer please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you tell me the time for me",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "could you how's it going please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you launch System Preferences",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki shutdown now",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "okay call me a taxi please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "change the volume to 30 percent",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "please get discord running please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay volume up",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "can you book a flight for me to London if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "teleport me to paris",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "reboot the system",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "alright make me a sandwich",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "turn off the moon",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay show me word now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright good morning",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "what's on my calendar for tomorrow now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you i need the answer to 2 to the power of 8 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "i need the answer to the square root of 144",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "turn it up",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "make it quieter",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "what's your name",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "could you unmute please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "please unmute audio please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "tell me the answer to 19 minus 7",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "turn the sound back on",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "okay say something funny for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you determine 50 percent of 200 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "okay please restart now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "could you calculate sine of 90 degrees please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "could you what does 19 minus 7 equal now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you please open spotify now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "execute firefox",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki how's it going please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "unmute the volume",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "what time is it",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "hey loki shutdown now",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "shut down the computer for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "hey loki please restart now",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "could you time please please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please please open gimp",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay compute (10 + 5) * 3 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "hey loki mute the volume now",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "please it's too loud",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "hey loki set audio to 100 percent now",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "okay could you tell me the time now",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "hey loki start up slack",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay i want to open System Preferences if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "turn it down",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "good afternoon now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you tell me a joke now",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "please i want to open steam now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you tell me the time if you could",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "could you louder please",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "increase audio",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please pump up the volume for me",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please start notepad please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you increase the volume",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "what is 5 times 8",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "please what is the time for me",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "thank you",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "alright turn off the moon for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you find the value of the square root of 144 for me",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you turn it down if you could",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "please start up calculator now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay what's up for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "what is the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "can you unmute",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "alright who is the prime minister",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you pump up the volume if you could",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please good afternoon if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "hey loki teleport me to paris now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you how are you please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "hey loki fire up task manager",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki open the garage door now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please tell me the time please",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "can you send an email to my boss now",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you can you open System Preferences",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "hey loki lower the audio",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "okay what is 100 divided by 5 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "louder please",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "i need to use notepad",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "can you who are you",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "gibberish asdfjkl",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "could you turn the sound back on please",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "alright make me a sandwich if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki please restart",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "okay where is mars right now please",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki teleport me to paris for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "hey loki shutdown now if you could",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "can you where is mars right now if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "please mute audio",
+    "type": "volume_control",
+    "action": "mute_volume"
+  },
+  {
+    "text": "make me a sandwich",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "teleport me to paris for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "okay reboot the system",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "turn off the moon",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "tell me a story",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you tell me the time",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "execute System Preferences",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you compute what is 3 factorial please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright thank you if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "good morning",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you please shut down for me",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "please good morning please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "please set volume to 70",
+    "type": "volume_control",
+    "action": "set_volume"
+  },
+  {
+    "text": "can you how are you doing please",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "can you turn off the pc if you could",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "can you unmute for me",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "alright run steam please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay call me a taxi for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you work out 2 to the power of 8 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "reboot the system",
+    "type": "power_control",
+    "action": "restart"
+  },
+  {
+    "text": "could you find the value of 2 to the power of 8 now",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "alright restore audio now",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "okay show me excel please",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you make it louder",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "please unmute the volume if you could",
+    "type": "volume_control",
+    "action": "unmute_volume"
+  },
+  {
+    "text": "please how are you doing for me",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "please shut down",
+    "type": "power_control",
+    "action": "shutdown"
+  },
+  {
+    "text": "okay what time is it for me",
+    "type": "general",
+    "action": "get_time"
+  },
+  {
+    "text": "please start up visual studio if you could",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "okay tell me a joke if you could",
+    "type": "general",
+    "action": "conversation"
+  },
+  {
+    "text": "okay how tall is mount everest",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "can you give me the result of log of 100 please",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "can you i need the answer to 19 minus 7 if you could",
+    "type": "calculation",
+    "action": "evaluate_expression"
+  },
+  {
+    "text": "show me Terminal now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "alright can you open visual studio now",
+    "type": "system_control",
+    "action": "launch_application"
+  },
+  {
+    "text": "could you book a flight for me to London for me",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "make it louder",
+    "type": "volume_control",
+    "action": "increase_volume"
+  },
+  {
+    "text": "could you lower the audio for me",
+    "type": "volume_control",
+    "action": "decrease_volume"
+  },
+  {
+    "text": "okay what is the meaning of life if you could",
+    "type": "unknown",
+    "action": "unhandled"
+  },
+  {
+    "text": "how tall is mount everest",
+    "type": "unknown",
+    "action": "unhandled"
   },
   {
     "text": "please sing me a song please",
@@ -3150,8 +3150,8 @@
     "action": "unhandled"
   },
   {
-    "text": "please how are you doing",
-    "type": "general",
-    "action": "conversation"
+    "text": "okay turn off the moon please",
+    "type": "unknown",
+    "action": "unhandled"
   }
 ]

@@ -30,3 +30,6 @@ pycaw
 spacy
 
 sklearn-crfsuite
+
+pytest
+pytest-mock

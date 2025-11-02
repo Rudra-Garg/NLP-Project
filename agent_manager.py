@@ -12,7 +12,7 @@ class AgentManager:
 
     def dispatch(self, intent: dict) -> str:
         intent_type = intent.get("type")
-        if not intent_type:
+        if not intent_type or intent_type == "unknown":
             return "I'm not sure what you mean."
 
         agent = self._agents.get(intent_type)

@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-
+import spacy
 from sentence_transformers import SentenceTransformer, util
 
 
@@ -10,6 +10,8 @@ class FastClassifier:
         self.SIMILARITY_THRESHOLD = threshold
         print(f"Loading SentenceTransformer model: '{model_name}'...")
         self.model = SentenceTransformer(model_name, device='cpu')
+        print("Loading spaCy model for lemmatization...")
+        self.nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
         self._load_and_embed_intents(intents_path)
         print("FastClassifier is ready.")
 
@@ -29,7 +31,11 @@ class FastClassifier:
         if not transcript:
             return {"type": "unknown", "confidence": 0.0, "transcript": ""}
 
-        transcript_embedding = self.model.encode(transcript.lower(), convert_to_tensor=True)
+        doc = self.nlp(transcript.lower())
+        lemmatized_transcript = " ".join([token.lemma_ for token in doc])
+        print(f"[FastClassifier] Original: '{transcript}' -> Lemmatized: '{lemmatized_transcript}'")
+
+        transcript_embedding = self.model.encode(lemmatized_transcript, convert_to_tensor=True)
         scores = util.cos_sim(transcript_embedding, self.known_embeddings)[0]
 
         best_match_index = scores.argmax()
