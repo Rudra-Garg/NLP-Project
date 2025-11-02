@@ -112,6 +112,7 @@ class LokiWorker:
                 while not self.stop_event.is_set():
                     pcm, _ = stream.read(FRAME_LENGTH)
                     if self.porcupine.process(pcm.flatten()) >= 0:
+                        self.queue.put("SHOW_WINDOW")
                         self.queue.put("STATUS: Wake word detected!")
                         self.tts_manager.speak_async("Yes?")
                         # The rest of the processing logic from your main.py goes here
@@ -178,7 +179,7 @@ class LokiWorker:
                         response_text = self.agent_manager.dispatch(intent)
                         self.queue.put(f'LOKI: "{response_text}"')
                         self.tts_manager.speak_async(response_text)
-
+                        self.queue.put("HIDE_WINDOW")
                         self.queue.put("STATUS: Listening for 'Hey Loki'...")
 
         except Exception as e:
