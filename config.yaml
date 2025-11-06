@@ -25,8 +25,8 @@ intent:
   training_data_path: "data/intent_training_data.json"
 
   fast_classifier:
-    model: "all-MiniLM-L6-v2"
-    threshold: 0.40
+    model: "multi-qa-mpnet-base-dot-v1"
+    threshold: 0.60
 
   llm_classifier:
     model: "dolphin-phi"
