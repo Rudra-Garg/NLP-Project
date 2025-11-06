@@ -1,16 +1,14 @@
-import os
 import queue
 import threading
 from pathlib import Path
 
 import numpy as np
 import sounddevice as sd
-from dotenv import load_dotenv
 from faster_whisper import WhisperModel
 from pvporcupine import create
 
 from agent_manager import AgentManager
-from agents import CalculationAgent, SystemControlAgent, VolumeControlAgent
+from config import settings
 from intent import FastClassifier, LLMClassifier
 from ner_predictor import NERPredictor
 from tts import PiperTTSNative
@@ -31,29 +29,26 @@ class LokiWorker:
         self.tts_engine = None
 
     def _initialize_components(self):
-        """Loads all configuration and initializes LOKI components."""
+        """Loads all configuration and initializes LOKI components from the settings object."""
         self.queue.put("STATUS: Loading configuration...")
-        load_dotenv()
 
-        # PicoVoice Porcupine
-        ACCESS_KEY = os.environ.get("ACCESS_KEY")
-        PORCUPINE_MODEL_PATH = os.environ.get("PORCUPINE_MODEL_PATH")
-        PORCUPINE_KEYWORD_PATH = os.environ.get("PORCUPINE_KEYWORD_PATH")
-        PORCUPINE_SENSITIVITY = float(os.environ.get("PORCUPINE_SENSITIVITY", 0.5))
+        # Get secrets and paths from the unified settings object
+        ACCESS_KEY = settings['picovoice']['access_key']
+        PORCUPINE_MODEL_PATH = settings['picovoice']['model_path']
+        PORCUPINE_KEYWORD_PATH = settings['picovoice']['keyword_path']
+        PORCUPINE_SENSITIVITY = settings['picovoice']['sensitivity']
 
-        # Whisper STT
-        WHISPER_MODEL_SIZE = os.environ.get("WHISPER_MODEL_SIZE", "small.en")
-        WHISPER_DEVICE = os.environ.get("WHISPER_DEVICE", "cpu")
-        WHISPER_COMPUTE_TYPE = os.environ.get("WHISPER_COMPUTE_TYPE", "int8")
+        WHISPER_MODEL_SIZE = settings['stt']['model_size']
+        WHISPER_DEVICE = settings['stt']['device']
+        WHISPER_COMPUTE_TYPE = settings['stt']['compute_type']
 
-        # Intent Classification
-        INTENTS_JSON_PATH = os.environ.get("INTENTS_JSON_PATH")
-        FAST_CLASSIFIER_MODEL = os.environ.get("FAST_CLASSIFIER_MODEL")
-        FAST_CLASSIFIER_THRESHOLD = float(os.environ.get("FAST_CLASSIFIER_THRESHOLD", 0.80))
-        OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "dolphin-phi")
+        INTENTS_JSON_PATH = settings['intent']['training_data_path']
+        FAST_CLASSIFIER_MODEL = settings['intent']['fast_classifier']['model']
+        FAST_CLASSIFIER_THRESHOLD = settings['intent']['fast_classifier']['threshold']
+        OLLAMA_MODEL = settings['intent']['llm_classifier']['model']
 
-        # Piper TTS
-        PIPER_MODEL_PATH = os.environ.get("PIPER_MODEL_PATH")
+        NER_MODEL_PATH = settings['ner']['model_path']
+        PIPER_MODEL_PATH = settings['tts']['model_path']
 
         if not ACCESS_KEY:
             self.queue.put("ERROR: ACCESS_KEY not found in .env file.")
@@ -62,12 +57,14 @@ class LokiWorker:
         self.queue.put("STATUS: Initializing LOKI components...")
         project_root = Path(__file__).parent
 
+        # Resolve relative paths to absolute paths
         porcupine_model_path = str(project_root / PORCUPINE_MODEL_PATH)
         porcupine_keyword_path = str(project_root / PORCUPINE_KEYWORD_PATH)
         intents_json_path = project_root / INTENTS_JSON_PATH
         piper_model_path = str(project_root / PIPER_MODEL_PATH)
-        ner_model_path = project_root / "models" / "ner" / "ner_model.joblib"
+        ner_model_path = project_root / NER_MODEL_PATH
 
+        # --- Component Initialization (No changes needed here) ---
         self.ner_predictor = NERPredictor(ner_model_path)
         self.porcupine = create(
             access_key=ACCESS_KEY,
@@ -87,14 +84,17 @@ class LokiWorker:
         self.llm_classifier = LLMClassifier(model_name=OLLAMA_MODEL)
 
         self.agent_manager = AgentManager()
-        self.agent_manager.register_agent(CalculationAgent())
-        self.agent_manager.register_agent(SystemControlAgent())
-        self.agent_manager.register_agent(VolumeControlAgent())
 
         self.tts_engine = PiperTTSNative(model_path=piper_model_path)
         self.tts_manager = TTSManager(tts_engine=self.tts_engine)
 
         return True
+
+    def _send_hide_window(self):
+        """Callback to send HIDE_WINDOW message after TTS completes."""
+        print("[DEBUG WORKER] TTS completed, sending HIDE_WINDOW message")
+        self.queue.put("HIDE_WINDOW")
+        self.queue.put("STATUS: LISTENING_IDLE")
 
     def run(self):
         """The main loop of the voice assistant."""
@@ -108,22 +108,29 @@ class LokiWorker:
         self.queue.put("STATUS: Listening for 'Hey Loki'...")
 
         try:
-            with sd.InputStream(samplerate=SAMPLE_RATE, channels=1, dtype='int16', blocksize=FRAME_LENGTH) as stream:
+            with (sd.InputStream(samplerate=SAMPLE_RATE, channels=1, dtype='int16', blocksize=FRAME_LENGTH) as stream):
                 while not self.stop_event.is_set():
+                    # Check for text input messages from GUI
+                    try:
+                        message = self.queue.get_nowait()
+                        if message.startswith("TEXT_INPUT:"):
+                            text_input = message.replace("TEXT_INPUT:", "").strip()
+                            self.process_text_input(text_input)
+                            continue
+                    except queue.Empty:
+                        pass
+
                     pcm, _ = stream.read(FRAME_LENGTH)
                     if self.porcupine.process(pcm.flatten()) >= 0:
                         self.queue.put("SHOW_WINDOW")
                         self.queue.put("STATUS: Wake word detected!")
                         self.tts_manager.speak_async("Yes?")
-                        # The rest of the processing logic from your main.py goes here
-                        # Note the use of self.queue.put to send messages to the GUI
-                        # instead of print()
+                        self.queue.put("STATUS: LISTENING_ACTIVE")
 
-                        # --- VAD and Recording Logic (Copied from main.py) ---
-                        VAD_THRESHOLD = float(os.environ.get("VAD_THRESHOLD", 0.01))
-                        VAD_SILENCE_FRAMES_AFTER_SPEECH = int(os.environ.get("VAD_SILENCE_FRAMES_AFTER_SPEECH", 40))
-                        VAD_NO_SPEECH_TIMEOUT_FRAMES = int(os.environ.get("VAD_NO_SPEECH_TIMEOUT_FRAMES", 100))
-                        VAD_MAX_RECORDING_FRAMES = int(os.environ.get("VAD_MAX_RECORDING_FRAMES", 350))
+                        VAD_THRESHOLD = settings['vad']['threshold']
+                        VAD_SILENCE_FRAMES_AFTER_SPEECH = settings['vad']['silence_frames_after_speech']
+                        VAD_NO_SPEECH_TIMEOUT_FRAMES = settings['vad']['no_speech_timeout_frames']
+                        VAD_MAX_RECORDING_FRAMES = settings['vad']['max_recording_frames']
 
                         self.queue.put("STATUS: Listening for command...")
                         audio_chunks = []
@@ -150,7 +157,7 @@ class LokiWorker:
                             if len(audio_chunks) > VAD_MAX_RECORDING_FRAMES:
                                 break
                         # --- End of VAD ---
-
+                        self.queue.put("STATUS: PROCESSING")
                         audio_int16 = np.concatenate([c.flatten() for c in audio_chunks])
                         audio_float32 = audio_int16.astype(np.float32) / 32768.0
 
@@ -160,15 +167,15 @@ class LokiWorker:
 
                         if not transcription:
                             self.queue.put("HEARD: Heard nothing.")
-                            self.tts_manager.speak_async("I did not hear anything.")
-                            self.queue.put("STATUS: Listening for 'Hey Loki'...")
+                            # Use callback to hide window after TTS completes
+                            self.tts_manager.speak_async("I did not hear anything.", on_complete=self._send_hide_window)
                             continue
 
                         self.queue.put(f'HEARD: "{transcription}"')
                         intent = self.fast_classifier.classify(transcription)
 
-                        if intent['type'] == 'unknown' or intent[
-                            'confidence'] < self.fast_classifier.SIMILARITY_THRESHOLD:
+                        if (intent['type'] == 'unknown' or
+                                intent['confidence'] < self.fast_classifier.SIMILARITY_THRESHOLD):
                             self.queue.put("STATUS: Fast path failed. Falling back to LLM...")
                             intent = self.llm_classifier.classify(transcription)
 
@@ -178,14 +185,42 @@ class LokiWorker:
 
                         response_text = self.agent_manager.dispatch(intent)
                         self.queue.put(f'LOKI: "{response_text}"')
-                        self.tts_manager.speak_async(response_text)
-                        self.queue.put("HIDE_WINDOW")
-                        self.queue.put("STATUS: Listening for 'Hey Loki'...")
+                        # Use callback to hide window after TTS completes
+                        self.tts_manager.speak_async(response_text, on_complete=self._send_hide_window)
 
         except Exception as e:
             self.queue.put(f"ERROR: An exception occurred: {e}")
         finally:
             self.cleanup()
+
+    def process_text_input(self, transcription: str):
+        """Process text input as if it were transcribed speech."""
+        self.queue.put("STATUS: PROCESSING")
+
+        if not transcription:
+            self.queue.put("HEARD: Empty input.")
+            self.tts_manager.speak_async("Please enter a command.")
+            self.queue.put("STATUS: LISTENING_IDLE")
+            return
+
+        self.queue.put(f'HEARD: "{transcription}"')
+        intent = self.fast_classifier.classify(transcription)
+
+        if (intent['type'] == 'unknown' or
+                intent['confidence'] < self.fast_classifier.SIMILARITY_THRESHOLD):
+            self.queue.put("STATUS: Fast path failed. Falling back to LLM...")
+            intent = self.llm_classifier.classify(transcription)
+
+        if intent['type'] != 'unknown':
+            entities = self.ner_predictor.predict(transcription)
+            intent.setdefault('parameters', {}).update(entities)
+
+        response_text = self.agent_manager.dispatch(intent)
+        self.queue.put(f'LOKI: "{response_text}"')
+        self.tts_manager.speak_async(response_text)
+        print("[DEBUG WORKER] Text input - NOT sending HIDE_WINDOW (manual input)")
+        # Don't send HIDE_WINDOW for text input - it's manual interaction
+        self.queue.put("STATUS: LISTENING_IDLE")
 
     def cleanup(self):
         """Cleans up resources."""

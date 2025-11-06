@@ -12,6 +12,7 @@ from tts import PiperTTSNative
 class TTSManager:
     """
     Manages TTS synthesis and audio playback in a separate, non-blocking thread.
+    Now supports callbacks when TTS playback completes.
     """
 
     def __init__(self, tts_engine: PiperTTSNative):
@@ -50,33 +51,45 @@ class TTSManager:
 
     def _process_queue(self):
         """
-        The main loop for the worker thread. It waits for text to appear on the
-        queue and then processes it.
+        The main loop for the worker thread. It waits for tasks to appear on the
+        queue and then processes them.
         """
         while True:
             # This is a blocking call, the thread will wait here until a task is available
-            text = self.task_queue.get()
+            task = self.task_queue.get()
 
             # A special "sentinel" value to signal the thread to exit
-            if text is None:
+            if task is None:
                 break
 
+            # Task is a tuple: (text, callback)
+            text, callback = task
             print(f"[TTSManager] Worker thread received task: '{text}'")
+
             # Perform the slow, blocking operations here
             wav_bytes = self.tts_engine.speak(text)
             self._play_audio(wav_bytes)
+
+            # After playback is complete, call the callback if provided
+            if callback:
+                print(f"[TTSManager] Calling completion callback")
+                callback()
 
             self.task_queue.task_done()
 
         print("[TTSManager] Worker thread shutting down.")
 
-    def speak_async(self, text: str):
+    def speak_async(self, text: str, on_complete=None):
         """
         Public method to add text to the TTS queue. This is non-blocking.
+
+        Args:
+            text: The text to synthesize and speak
+            on_complete: Optional callback function to call after playback completes
         """
         if not text:
             return
-        self.task_queue.put(text)
+        self.task_queue.put((text, on_complete))
         print(f"[TTSManager] Queued for synthesis: '{text}'")
 
     def shutdown(self):

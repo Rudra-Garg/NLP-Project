@@ -1,0 +1,38 @@
+# config.yaml
+
+# Configuration for the LOKI Voice Assistant.
+# Secret keys are loaded separately from the .env file.
+
+picovoice:
+  model_path: "models/porcupine/porcupine_params.pv"
+  # Note: The specific keyword file might differ based on your OS.
+  keyword_path: "models/porcupine/Hey-Loki.ppn"
+  sensitivity: 0.5
+
+stt: # Speech-to-Text (Whisper)
+  model_size: "small.en" # tiny.en, base.en, small.en, medium.en
+  device: "cpu"         # "cpu" or "cuda"
+  compute_type: "int8"  # "int8" for CPU, "float16" for GPU
+
+vad: # Voice Activity Detection
+  threshold: 0.01
+  silence_frames_after_speech: 40
+  no_speech_timeout_frames: 100
+  max_recording_frames: 350
+
+intent:
+  # Path is relative to the project root
+  training_data_path: "data/intent_training_data.json"
+
+  fast_classifier:
+    model: "all-MiniLM-L6-v2"
+    threshold: 0.40
+
+  llm_classifier:
+    model: "dolphin-phi"
+
+ner:
+  model_path: "models/ner/ner_model.joblib"
+
+tts: # Text-to-Speech (Piper)
+  model_path: "models/piper/en_US-hfc_male-medium.onnx"
