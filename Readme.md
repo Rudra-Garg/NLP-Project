@@ -4,7 +4,11 @@ LOKI is a private, responsive, and powerful voice assistant that runs entirely o
 
 The application operates from the system tray, activating a sleek, frameless GUI only when you say the wake word. Its core is a dual-layer intent classification system that handles common commands instantly and falls back to a local Large Language Model (LLM) for more complex queries.
 
-[//]: # (![LOKI GUI Screenshot]&#40;placeholder.png&#41;  <!-- It's highly recommended to add a screenshot of your new GUI here! -->)
+Find the report [here](https://github.com/Rudra-Garg/NLP-Project/blob/main/Presentation/Report.pdf).
+
+Find the presentation [here](https://github.com/Rudra-Garg/NLP-Project/blob/main/Presentation/PPT.pdf).
+
+Find the demo video [here](https://github.com/Rudra-Garg/NLP-Project/blob/main/Presentation/demo.mp4).
 
 ## Core Features
 
